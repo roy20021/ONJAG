@@ -4,7 +4,7 @@ ONJAG
 Overlays Not Just a Graph
 
 This abstraction was developed as part of the Master thesis of Computer Science by Andrea Esposito at University of Pisa (2014). <br/>
-The thesis's title is: <i>"ONJAG, network overlays supporting graph processing"</i>.
+The thesis's title is: <i>"ONJAG, network overlays supporting distributed graph processing"</i>.
 
 It runs over <a href="https://github.com/apache/spark">Spark</a>, a <i>"general engine for large-scale data processing"</i> (1.0.0).
 
