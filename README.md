@@ -19,7 +19,7 @@ The template usage is:
 - create the protocols
 - instantiate the OnJag engine defining the protocols set as parameters
 - create the initial vertices, messages, checkpoint conditions and whatever needed
-- run the onjag instance invoking the ``run'' method
+- run the onjag instance invoking the "<i>run<i>" method
 
 **Example 1**<br/>
 Simple computation of an Empty Protocol, i.e. at each superstep the vertices idle:
