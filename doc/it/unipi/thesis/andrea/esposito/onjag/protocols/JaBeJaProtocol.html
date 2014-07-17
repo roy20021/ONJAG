@@ -1,0 +1,916 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>JaBeJaProtocol - ONJAG documentation - it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol</title>
+          <meta name="description" content="JaBeJaProtocol - ONJAG documentation - it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol" />
+          <meta name="keywords" content="JaBeJaProtocol ONJAG documentation it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../../index.html';
+            var hash = 'it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="JaBeJaProtocol$.html" title="Go to companion"><img src="../../../../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../../../../package.html" class="extype" name="it">it</a>.<a href="../../../../../package.html" class="extype" name="it.unipi">unipi</a>.<a href="../../../../package.html" class="extype" name="it.unipi.thesis">thesis</a>.<a href="../../../package.html" class="extype" name="it.unipi.thesis.andrea">andrea</a>.<a href="../../package.html" class="extype" name="it.unipi.thesis.andrea.esposito">esposito</a>.<a href="../package.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag">onjag</a>.<a href="package.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols">protocols</a></p>
+        <h1><a href="JaBeJaProtocol$.html" title="Go to companion">JaBeJaProtocol</a></h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JaBeJaProtocol</span><span class="result"> extends <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a> with <span class="extype" name="org.apache.spark.Logging">Logging</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Protocol which implements the JA-BE-JA algorithm</p><p>Paper:
+Rahimian, F.; Payberah, A.H.; Girdzijauskas, S.; Jelasity, M.; Haridi, S.,
+&quot;JA-BE-JA: A Distributed Algorithm for Balanced Graph Partitioning,&quot;
+Self-Adaptive and Self-Organizing Systems (SASO),
+2013 IEEE 7th International Conference on , vol., no., pp.51,60, 9-13 Sept. 2013</p><p>The arrangement of JA-BE-JA to BSP/Pregel-like systems such as Spark are partially described in:
+Emanuele	Carlini; Patrizio	Dazzi; Andrea	Esposito; Alessandro	Lulli; Laura	Ricci,
+&quot;Balanced Graph Partitioning with Apache Spark&quot;,
+BigDataCloud 2014 - Third Workshop on Big Data Management in Clouds</p><p>Extended experiments and further details in:
+Andrea, Esposito (2014),
+&quot;ONJAG, network overlays supporting distributed graph processing&quot;,
+M.Sc. Thesis,
+University of Pisa: Pisa.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol"><span>JaBeJaProtocol</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol"><span>Protocol</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(random_seed:Long,alfa_param:Double,TStart:Double,delta:Double,randomCacheViewSize_param:Int,tmanCacheViewSize_param:Int,partnerPickOrder_param:it.unipi.thesis.andrea.esposito.onjag.protocols.PartnerPickOrder.Value,pickPartnerProbabilities_param:Array[Double],partnerAttempts_param:Int,minCutSamplingRate_param:Int,approximate_param:Boolean,startStep_param:Int,step_param:Int):it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol"></a>
+      <a id="&lt;init&gt;:JaBeJaProtocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JaBeJaProtocol</span><span class="params">(<span name="random_seed">random_seed: <span class="extype" name="scala.Long">Long</span></span>, <span name="alfa_param">alfa_param: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">2.0</span></span>, <span name="TStart">TStart: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">2.0</span></span>, <span name="delta">delta: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.003</span></span>, <span name="randomCacheViewSize_param">randomCacheViewSize_param: <span class="extype" name="scala.Int">Int</span></span>, <span name="tmanCacheViewSize_param">tmanCacheViewSize_param: <span class="extype" name="scala.Int">Int</span></span>, <span name="partnerPickOrder_param">partnerPickOrder_param: <a href="PartnerPickOrder$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="it.unipi.thesis.andrea.esposito.onjag.protocols.PartnerPickOrder.Value">PartnerPickOrder.Value</a> = <span class="symbol">PartnerPickOrder.NEIGH_TMAN_RAND</span></span>, <span name="pickPartnerProbabilities_param">pickPartnerProbabilities_param: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>] = <span class="symbol">scala.Array.apply(1.0)</span></span>, <span name="partnerAttempts_param">partnerAttempts_param: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>, <span name="minCutSamplingRate_param">minCutSamplingRate_param: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">6</span></span>, <span name="approximate_param">approximate_param: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="startStep_param">startStep_param: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>, <span name="step_param">step_param: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">random_seed</dt><dd class="cmt"></dd><dt class="param">alfa_param</dt><dd class="cmt"></dd><dt class="param">TStart</dt><dd class="cmt"></dd><dt class="param">delta</dt><dd class="cmt"></dd><dt class="param">pickPartnerProbabilities_param</dt><dd class="cmt"></dd><dt class="param">partnerAttempts_param</dt><dd class="cmt"></dd><dt class="param">minCutSamplingRate_param</dt><dd class="cmt"><p>//How many times the protocol has to run before the mincut sampling takes place</p></dd><dt class="param">approximate_param</dt><dd class="cmt"></dd><dt class="param">startStep_param</dt><dd class="cmt"></dd><dt class="param">step_param</dt><dd class="cmt"><p>
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.aggregatorType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregatorType=Nothing"></a>
+      <a id="aggregatorType:aggregatorType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aggregatorType</span><span class="result"> = <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#DECISIONAL_SLICE_SIZE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DECISIONAL_SLICE_SIZE:Int"></a>
+      <a id="DECISIONAL_SLICE_SIZE:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DECISIONAL_SLICE_SIZE</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#DECISIONAL_THRESOLD_PERCENTAGE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DECISIONAL_THRESOLD_PERCENTAGE:Double"></a>
+      <a id="DECISIONAL_THRESOLD_PERCENTAGE:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DECISIONAL_THRESOLD_PERCENTAGE</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#DECISIONAL_WINDOW_MINSIZE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DECISIONAL_WINDOW_MINSIZE:Int"></a>
+      <a id="DECISIONAL_WINDOW_MINSIZE:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DECISIONAL_WINDOW_MINSIZE</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#TStart" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TStart:Double"></a>
+      <a id="TStart:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TStart</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#afterSuperstep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="afterSuperstep(sc:org.apache.spark.SparkContext,superstep:Int):Unit"></a>
+      <a id="afterSuperstep(SparkContext,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">afterSuperstep</span><span class="params">(<span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>, <span name="superstep">superstep: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Decrease Temperature of the Simulated Annealing Technique and ameneties about mincut logging and statistics variables</p><div class="fullcomment"><div class="comment cmt"><p>Decrease Temperature of the Simulated Annealing Technique and ameneties about mincut logging and statistics variables</p></div><dl class="paramcmts block"><dt class="param">sc</dt><dd class="cmt"><p>Spark context
+</p></dd><dt class="param">superstep</dt><dd class="cmt"><p>the just ended superstep</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#beforeSuperstep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="beforeSuperstep(sc:org.apache.spark.SparkContext,superstep:Int):Unit"></a>
+      <a id="beforeSuperstep(SparkContext,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">beforeSuperstep</span><span class="params">(<span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>, <span name="superstep">superstep: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">initialize statistics variable and other amenities about the mincut sampling rate</p><div class="fullcomment"><div class="comment cmt"><p>initialize statistics variable and other amenities about the mincut sampling rate</p></div><dl class="paramcmts block"><dt class="param">sc</dt><dd class="cmt"><p>Spark context
+</p></dd><dt class="param">superstep</dt><dd class="cmt"><p>the superstep that will be executed</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#bestMinCutList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bestMinCutList:org.apache.spark.Accumulator[Seq[(String,String)]]"></a>
+      <a id="bestMinCutList:Accumulator[Seq[(String,String)]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bestMinCutList</span><span class="result">: <span class="extype" name="org.apache.spark.Accumulator">Accumulator</span>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#bestMinCutSuperstep" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bestMinCutSuperstep:Int"></a>
+      <a id="bestMinCutSuperstep:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bestMinCutSuperstep</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#bestMinCutValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bestMinCutValue:Double"></a>
+      <a id="bestMinCutValue:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bestMinCutValue</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#brutalStoppable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="brutalStoppable():Boolean"></a>
+      <a id="brutalStoppable():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">brutalStoppable</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Define if this protocol could be stopped ignoring the vertices flags and the messages</p><div class="fullcomment"><div class="comment cmt"><p>Define if this protocol could be stopped ignoring the vertices flags and the messages</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if brutal stoppable, false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#compute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compute[K](self:it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext[K],messages:Seq[it.unipi.thesis.andrea.esposito.onjag.core.Message[K]],responseProtocolCxtMsgs:Seq[it.unipi.thesis.andrea.esposito.onjag.core.ResponseVertexContextMessage[K]],aggregator:Option[Nothing],superstep:Int)(implicitevidence$2:scala.reflect.ClassTag[K]):(Boolean,Seq[_&lt;:it.unipi.thesis.andrea.esposito.onjag.core.Message[K]],Seq[it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage[K]])"></a>
+      <a id="compute[K](ProtocolVertexContext[K],Seq[Message[K]],Seq[ResponseVertexContextMessage[K]],Option[Nothing],Int)(ClassTag[K]):(Boolean,Seq[_&lt;:Message[K]],Seq[RequestVertexContextMessage[K]])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compute</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="self">self: <a href="../core/ProtocolVertexContext.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext">ProtocolVertexContext</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]</span>, <span name="messages">messages: <span class="extype" name="scala.Seq">Seq</span>[<a href="../core/Message.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Message">Message</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]]</span>, <span name="responseProtocolCxtMsgs">responseProtocolCxtMsgs: <span class="extype" name="scala.Seq">Seq</span>[<a href="../core/ResponseVertexContextMessage.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.ResponseVertexContextMessage">ResponseVertexContextMessage</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]]</span>, <span name="aggregator">aggregator: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Nothing">Nothing</span>]</span>, <span name="superstep">superstep: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Seq">Seq</span>[_ &lt;: <a href="../core/Message.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Message">Message</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]], <span class="extype" name="scala.Seq">Seq</span>[<a href="../core/RequestVertexContextMessage.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage">RequestVertexContextMessage</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.compute.K">K</span>]])</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Logic function which is executed in parallel for each vertex
+</p><div class="fullcomment"><div class="comment cmt"><p>Logic function which is executed in parallel for each vertex
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Id's type</p></dd><dt class="param">self</dt><dd class="cmt"><p>the current vertex context that has to be executed</p></dd><dt class="param">messages</dt><dd class="cmt"><p>incoming messages</p></dd><dt class="param">responseProtocolCxtMsgs</dt><dd class="cmt"><p>response messages</p></dd><dt class="param">aggregator</dt><dd class="cmt"><p>aggregator's result</p></dd><dt class="param">superstep</dt><dd class="cmt"><p>Current superstep</p></dd><dt>returns</dt><dd class="cmt"><p>Out-coming messages and Request Messages
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#createInitMessages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createInitMessages[K](context:it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext[K],data:Any)(implicitevidence$4:scala.reflect.ClassTag[K]):(Seq[_&lt;:it.unipi.thesis.andrea.esposito.onjag.core.Message[K]],Seq[it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage[K]])"></a>
+      <a id="createInitMessages[K](ProtocolVertexContext[K],Any)(ClassTag[K]):(Seq[_&lt;:Message[K]],Seq[RequestVertexContextMessage[K]])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createInitMessages</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="context">context: <a href="../core/ProtocolVertexContext.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext">ProtocolVertexContext</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createInitMessages.K">K</span>]</span>, <span name="data">data: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createInitMessages.K">K</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.Seq">Seq</span>[_ &lt;: <a href="../core/Message.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Message">Message</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createInitMessages.K">K</span>]], <span class="extype" name="scala.Seq">Seq</span>[<a href="../core/RequestVertexContextMessage.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage">RequestVertexContextMessage</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createInitMessages.K">K</span>]])</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Customizable method for creating the ONJAG-ready messages</p><div class="fullcomment"><div class="comment cmt"><p>Customizable method for creating the ONJAG-ready messages</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Id's type</p></dd><dt class="param">context</dt><dd class="cmt"><p>the vertex context of this protocol</p></dd><dt class="param">data</dt><dd class="cmt"><p>User-parameter data</p></dd><dt>returns</dt><dd class="cmt"><p>ONJAG-ready messages
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#createProtocolVertexContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createProtocolVertexContext[K](id:K,data:Array[Any])(implicitevidence$5:scala.reflect.ClassTag[K]):it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext[K]"></a>
+      <a id="createProtocolVertexContext[K](K,Array[Any])(ClassTag[K]):ProtocolVertexContext[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createProtocolVertexContext</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="id">id: <span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createProtocolVertexContext.K">K</span></span>, <span name="data">data: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createProtocolVertexContext.K">K</span>]</span>)</span><span class="result">: <a href="../core/ProtocolVertexContext.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.ProtocolVertexContext">ProtocolVertexContext</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.createProtocolVertexContext.K">K</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"></dd><dt class="param">id</dt><dd class="cmt"><p>Vertex's Id</p></dd><dt class="param">data</dt><dd class="cmt"><p>At Position 0 must be the color, it must be in [0, maxcolor]. From position 1 there are the neighbours id.</p></dd><dt>returns</dt><dd class="cmt"><p>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init(sc:org.apache.spark.SparkContext):Unit"></a>
+      <a id="init(SparkContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">(<span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Initializer of the Protocol.</p><div class="fullcomment"><div class="comment cmt"><p>Initializer of the Protocol.
+Invoked the first time an <span class="extype" name="OnJag">OnJag</span> instantiation.</p></div><dl class="paramcmts block"><dt class="param">sc</dt><dd class="cmt"><p>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <a id="isTraceEnabled():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a>
+      <a id="log:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logDebug(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a>
+      <a id="logDebug(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logError(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a>
+      <a id="logError(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logInfo(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a>
+      <a id="logInfo(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logTrace(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a>
+      <a id="logTrace(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logWarning(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a>
+      <a id="logWarning(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#mincutHistory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mincutHistory:scala.collection.mutable.ListBuffer[Double]"></a>
+      <a id="mincutHistory:ListBuffer[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mincutHistory</span><span class="result">: <span class="extype" name="scala.collection.mutable.ListBuffer">ListBuffer</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">General Protocol attributes
+</p><div class="fullcomment"><div class="comment cmt"><p>General Protocol attributes
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#nextRandomCacheChunk" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nextRandomCacheChunk[K](cxtJaBeJa:it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaVertexContext[K]):TraversableOnce[it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage[K]]"></a>
+      <a id="nextRandomCacheChunk[K](JaBeJaVertexContext[K]):TraversableOnce[RequestVertexContextMessage[K]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextRandomCacheChunk</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cxtJaBeJa">cxtJaBeJa: <a href="JaBeJaVertexContext.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaVertexContext">JaBeJaVertexContext</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.nextRandomCacheChunk.K">K</span>]</span>)</span><span class="result">: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="../core/RequestVertexContextMessage.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage">RequestVertexContextMessage</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.nextRandomCacheChunk.K">K</span>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#nextTmanCacheChunk" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nextTmanCacheChunk[K](cxtJaBeJa:it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaVertexContext[K]):TraversableOnce[it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage[K]]"></a>
+      <a id="nextTmanCacheChunk[K](JaBeJaVertexContext[K]):TraversableOnce[RequestVertexContextMessage[K]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextTmanCacheChunk</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cxtJaBeJa">cxtJaBeJa: <a href="JaBeJaVertexContext.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaVertexContext">JaBeJaVertexContext</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.nextTmanCacheChunk.K">K</span>]</span>)</span><span class="result">: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="../core/RequestVertexContextMessage.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.RequestVertexContextMessage">RequestVertexContextMessage</a>[<span class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol.nextTmanCacheChunk.K">K</span>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#stableMinCut" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stableMinCut:Boolean"></a>
+      <a id="stableMinCut:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stableMinCut</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#startStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="startStep:Int"></a>
+      <a id="startStep:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startStep</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#step" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="step:Int"></a>
+      <a id="step:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">step</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.protocols.JaBeJaProtocol">JaBeJaProtocol</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.Logging">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.Logging">Logging</span></h3>
+            </div><div class="parent" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">
+              <h3>Inherited from <a href="../core/Protocol.html" class="extype" name="it.unipi.thesis.andrea.esposito.onjag.core.Protocol">Protocol</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../../lib/template.js"></script>
+    </body>
+      </html>
