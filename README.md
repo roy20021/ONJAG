@@ -10,7 +10,7 @@ It runs over <a href="https://github.com/apache/spark">Spark</a>, a <i>"general 
 
 The idea is to provide a stack view based of the graph computations. Like the Pregel framework the graph processing is described as a network simulation where vertices and edges are the nodes and links, respectively. In addition, ONJAG enables the definition of multiple parallel Pregel-like computations, called Protocols. The main provided feature is the inter-communications between Protocols allowing interactions, i.e. Protocol can exchange information with each other and orchestrate a complex but convenient computation. Mainly, our focus has been on the development of a P2P-like (Peer-to-Peer) protocol stack emphasizing the topology overlays which can be exploited.
 
-Further details are available in the thesis.
+Further details are available in the <a href="https://github.com/roy20021/ONJAG/blob/master/Thesis.pdf">thesis</a>.
 
 Examples
 =====
