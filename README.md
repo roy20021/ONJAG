@@ -12,6 +12,13 @@ The idea is to provide a stack view based of the graph computations. Like the Pr
 
 Further details are available in the <a href="https://github.com/roy20021/ONJAG/blob/master/Thesis.pdf">thesis</a>.
 
+In addition, part of the thesis has been published as a paper, namely:
+```
+Carlini E., Dazzi P., Esposito A., Lulli A. and Ricci L..
+"Balanced Graph Partitioning with Apache Spark".
+BigDataClouds, Euro-Par. 2014.
+```
+
 Examples
 =====
 
