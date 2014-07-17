@@ -46,7 +46,7 @@ println("OnJag Execution Ended")
 ```
 
 **Example 2**<br/>
-Exploiting inter-communications a P2P-like approach is adopted. The T-MAN algorithm and the Random Peer Sampling are employed. The example creates starting from a given graph a ring topology in which each node has 2 neighbours on each side.
+A P2P-like approach is adopted by exploiting inter-communications. The T-MAN algorithm and the Random Peer Sampling are employed. The example creates, starting from a given (random) graph, a ring topology in which each node has 2 neighbours on each side.
 ```scala
 val random = new Random(2014)
 val input = sc.textFile(inputFile)
